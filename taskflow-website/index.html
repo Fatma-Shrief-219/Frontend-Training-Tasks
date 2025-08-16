@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TaskFlow — Organize Your Tasks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 antialiased font-sans">
+  <header class="bg-white/60 backdrop-blur-md sticky top-0 z-40 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold shadow-md">TF</div>
+        <div>
+          <h1 class="text-lg font-semibold">TaskFlow</h1>
+          <p class="text-xs text-gray-600">Organize your tasks — Stay productive</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#features" class="text-sm hover:text-indigo-600">Features</a>
+        <a href="#reviews" class="text-sm hover:text-indigo-600">Reviews</a>
+        <a href="#pricing" class="text-sm hover:text-indigo-600">Pricing</a>
+        <button id="ctaTop" class="ml-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-md shadow-lg hover:opacity-90">Try Free</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileBtn" aria-label="Menu" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobilePanel" class="md:hidden hidden bg-white/80 backdrop-blur-md border-t">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#features" class="block">Features</a>
+        <a href="#reviews" class="block">Reviews</a>
+        <a href="#pricing" class="block">Pricing</a>
+        <button id="ctaMobile" class="w-full mt-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-md">Try Free</button>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+      <div class="space-y-6 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">TaskFlow — Organize Your Day, Get More Done</h2>
+        <p class="text-gray-600">Color code priorities, organize lists, and share projects easily. A modern, simple, and fast design to keep you focused.</p>
+        <div class="flex gap-3">
+          <button id="getStartedBtn" class="px-5 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-md shadow-lg hover:opacity-90">Get Started</button>
+          <a href="#features" class="px-5 py-3 border rounded-md text-gray-700 bg-white/60 backdrop-blur-md shadow">See Features</a>
+        </div>
+        <div class="mt-2 text-sm text-gray-500">Available on web — Free and paid plans.</div>
+      </div>
+      <div class="fade-up">
+        <div class="card-shadow rounded-xl overflow-hidden glass">
+          <div class="p-4 flex items-center justify-between border-b border-white/20">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold">TF</div>
+              <div>
+                <div class="text-sm font-semibold">My Projects</div>
+                <div class="text-xs text-gray-500">Active tasks list</div>
+              </div>
+            </div>
+            <div class="text-xs text-gray-400">5 tasks left</div>
+          </div>
+          <div class="p-4">
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" />
+                  <div>
+                    <div class="font-medium">Review project plan</div>
+                    <div class="text-xs text-gray-400">Today — High</div>
+                  </div>
+                </div>
+                <div class="text-xs text-gray-400">⏱ 2h</div>
+              </li>
+              <li class="flex items-center justify-between opacity-80">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" />
+                  <div>
+                    <div class="font-medium">Design landing page</div>
+                    <div class="text-xs text-gray-400">Tomorrow — Medium</div>
+                  </div>
+                </div>
+                <div class="text-xs text-gray-400">⏱ 4h</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="mb-12">
+      <h3 class="text-2xl font-bold mb-6 fade-up bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Features</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-5 glass rounded-lg card-shadow fade-up">
+          <div class="flex items-start gap-4">
+            <div class="p-3 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 text-white">📌</div>
+            <div>
+              <h4 class="font-semibold">Flexible Lists</h4>
+              <p class="text-sm text-gray-600">Create multiple lists and organize tasks by project.</p>
+            </div>
+          </div>
+        </article>
+        <article class="p-5 glass rounded-lg card-shadow fade-up">
+          <div class="flex items-start gap-4">
+            <div class="p-3 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 text-white">⚡</div>
+            <div>
+              <h4 class="font-semibold">Fast Performance</h4>
+              <p class="text-sm text-gray-600">Lightweight interface even with large lists.</p>
+            </div>
+          </div>
+        </article>
+        <article class="p-5 glass rounded-lg card-shadow fade-up">
+          <div class="flex items-start gap-4">
+            <div class="p-3 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 text-white">🔒</div>
+            <div>
+              <h4 class="font-semibold">Local Save</h4>
+              <p class="text-sm text-gray-600">Quick local storage sync without server.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="reviews" class="mb-12">
+      <h3 class="text-2xl font-bold mb-6 fade-up bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">User Reviews</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-5 glass rounded-lg card-shadow fade-up">
+          <p class="text-gray-700">"Easy to use and helped me organize my day. Love the simple design."</p>
+          <footer class="mt-4 text-sm text-gray-500">— Sarah, Project Manager</footer>
+        </blockquote>
+        <blockquote class="p-5 glass rounded-lg card-shadow fade-up">
+          <p class="text-gray-700">"The free version is enough for personal projects. Highly recommend."</p>
+          <footer class="mt-4 text-sm text-gray-500">— Ahmed, Developer</footer>
+        </blockquote>
+        <blockquote class="p-5 glass rounded-lg card-shadow fade-up">
+          <p class="text-gray-700">"Lightweight with simple clicks — perfect for focus."</p>
+          <footer class="mt-4 text-sm text-gray-500">— Layla, Student</footer>
+        </blockquote>
+      </div>
+    </section>
+    <section id="pricing" class="mb-12">
+      <h3 class="text-2xl font-bold mb-6 fade-up bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Pricing</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 glass rounded-lg card-shadow fade-up">
+          <div class="text-sm text-gray-600">Free</div>
+          <div class="text-3xl font-bold my-4">$0</div>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>Unlimited lists</li>
+            <li>Local sync</li>
+            <li>Limited support</li>
+          </ul>
+          <button class="mt-6 w-full px-4 py-2 bg-white/80 border rounded-md">Start Free</button>
+        </div>
+        <div class="p-6 rounded-lg card-shadow transform scale-100 md:scale-105 fade-up" style="background:linear-gradient(180deg,#6366F1,#8B5CF6);color:white">
+          <div class="text-sm opacity-90">Popular</div>
+          <div class="text-3xl font-bold my-4">$6 / month</div>
+          <ul class="text-sm space-y-2 opacity-90">
+            <li>Cloud sync</li>
+            <li>Advanced reminders</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="mt-6 w-full px-4 py-2 bg-white text-indigo-600 rounded-md">Subscribe</button>
+        </div>
+        <div class="p-6 glass rounded-lg card-shadow fade-up">
+          <div class="text-sm text-gray-600">Team</div>
+          <div class="text-3xl font-bold my-4">$18 / month</div>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>Unlimited users</li>
+            <li>Advanced permissions</li>
+            <li>Team reports</li>
+          </ul>
+          <button class="mt-6 w-full px-4 py-2 bg-white/80 border rounded-md">Start Now</button>
+        </div>
+      </div>
+    </section>
+    <footer class="mt-12 border-t pt-8 pb-12">
+      <div class="flex flex-col md:flex-row md:justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-md bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold">TF</div>
+            <div>
+              <div class="font-semibold">TaskFlow</div>
+              <div class="text-sm text-gray-500">Organize tasks easily</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8">
+          <div>
+            <div class="font-semibold">Links</div>
+            <ul class="text-sm text-gray-500 mt-2 space-y-1">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold">Contact</div>
+            <ul class="text-sm text-gray-500 mt-2 space-y-1">
+              <li>hello@taskflow.app</li>
+              <li>@taskflow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-sm text-gray-400">© 2025 TaskFlow. All rights reserved.</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+:root {
+  --primary-color: #4a6bff;
+  --secondary-color: #f8f9fa;
+  --accent-color: #ff6b6b;
+  --text-color: #333;
+  --light-text: #777;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  position: relative;
+}
+
+.contact-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+button:hover {
+  background: #3a56d4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 107, 255, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+.form-group.focused label {
+  color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+
+.form-group i {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  color: var(--light-text);
+}
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #3a56d4;
+}
+
+
+.contact-form h2 i {
+  margin-right: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+
+.success-animation {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.success-animation svg {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.checkmark {
+  stroke: var(--primary-color);
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.floating-message.success {
+  background: #4BB543;
+}
+
+.floating-message.error {
+  background: #ff4444;
+}
+
+.floating-message i {
+  margin-right: 10px;
+}
+
+
+#send-another {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+#send-another:hover {
+  background: #3a56d4;
+  transform: translateY(-2px);
+}
+
+
+.fa-spinner {
+  margin-right: 8px;
+}
+@media (hover: hover) {
+  .form-group:hover label {
+    color: var(--primary-color);
+  }
+  
+  input:hover, textarea:hover {
+    border-color: var(--primary-color);
+  }
+  
+  #send-another:hover {
+    box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+  }
+}
